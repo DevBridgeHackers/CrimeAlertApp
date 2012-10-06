@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7512CE0016203C5C00C144EF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512CDFF16203C5C00C144EF /* LoginViewController.m */; };
 		F9A7A7261620275300541767 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7251620275300541767 /* UIKit.framework */; };
 		F9A7A7281620275300541767 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7271620275300541767 /* Foundation.framework */; };
 		F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7291620275300541767 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7512CDFE16203C5C00C144EF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7512CDFF16203C5C00C144EF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F9A7A7211620275300541767 /* CrimeAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7A7251620275300541767 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9A7A7271620275300541767 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7512CDFC16203C3200C144EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7512CDFE16203C5C00C144EF /* LoginViewController.h */,
+				7512CDFF16203C5C00C144EF /* LoginViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		F9A7A7161620275200541767 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +95,7 @@
 		F9A7A72B1620275300541767 /* CrimeAlert */ = {
 			isa = PBXGroup;
 			children = (
+				7512CDFC16203C3200C144EF /* Classes */,
 				F9A7A7341620275400541767 /* AppDelegate.h */,
 				F9A7A7351620275400541767 /* AppDelegate.m */,
 				F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */,
@@ -176,6 +189,7 @@
 				F9A7A7321620275300541767 /* main.m in Sources */,
 				F9A7A7361620275400541767 /* AppDelegate.m in Sources */,
 				F9A7A7451620275400541767 /* ViewController.m in Sources */,
+				7512CE0016203C5C00C144EF /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +312,7 @@
 				F9A7A74A1620275400541767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
