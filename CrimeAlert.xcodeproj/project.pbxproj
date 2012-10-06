@@ -10,6 +10,15 @@
 		7529AC3A162068B8003B6A9B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC39162068B8003B6A9B /* MobileCoreServices.framework */; };
 		7529AC3E1620698E003B6A9B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7529AC3C1620698E003B6A9B /* LoginViewController.m */; };
 		7529AC40162069B5003B6A9B /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7529AC3F162069B5003B6A9B /* ToDo.rtf */; };
+		7529AC42162075E0003B6A9B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC41162075E0003B6A9B /* FacebookSDK.framework */; };
+		7529AC4416207801003B6A9B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC4316207801003B6A9B /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7529AC461620780A003B6A9B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC451620780A003B6A9B /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7529AC4816207909003B6A9B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC4716207909003B6A9B /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7529AC4A16207945003B6A9B /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7529AC4916207945003B6A9B /* FacebookSDKResources.bundle */; };
+		7529AC4D16207D18003B6A9B /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7529AC4C16207D18003B6A9B /* InitialViewController.m */; };
+		7529AC4F162095F2003B6A9B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC4E162095F2003B6A9B /* CoreLocation.framework */; };
+		7529AC5216209D8E003B6A9B /* settings_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7529AC5016209D8E003B6A9B /* settings_btn.png */; };
+		7529AC5316209D8E003B6A9B /* settings_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7529AC5116209D8E003B6A9B /* settings_btn@2x.png */; };
 		F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B03911620358800645C90 /* MWHTTPRequest.m */; };
 		F976966D162057520058A023 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966C162057520058A023 /* 45-movie-1.png */; };
 		F9769670162057630058A023 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966F162057630058A023 /* 86-camera.png */; };
@@ -35,6 +44,16 @@
 		7529AC3C1620698E003B6A9B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7529AC3D1620698E003B6A9B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7529AC3F162069B5003B6A9B /* ToDo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
+		7529AC41162075E0003B6A9B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		7529AC4316207801003B6A9B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		7529AC451620780A003B6A9B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		7529AC4716207909003B6A9B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		7529AC4916207945003B6A9B /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		7529AC4B16207D18003B6A9B /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		7529AC4C16207D18003B6A9B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		7529AC4E162095F2003B6A9B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7529AC5016209D8E003B6A9B /* settings_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_btn.png; sourceTree = "<group>"; };
+		7529AC5116209D8E003B6A9B /* settings_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_btn@2x.png"; sourceTree = "<group>"; };
 		F91B03901620358800645C90 /* MWHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWHTTPRequest.h; path = ../MWHTTPRequest.h; sourceTree = "<group>"; };
 		F91B03911620358800645C90 /* MWHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWHTTPRequest.m; path = ../MWHTTPRequest.m; sourceTree = "<group>"; };
 		F976966C162057520058A023 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
@@ -66,10 +85,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7529AC4F162095F2003B6A9B /* CoreLocation.framework in Frameworks */,
+				7529AC4816207909003B6A9B /* Social.framework in Frameworks */,
+				7529AC461620780A003B6A9B /* AdSupport.framework in Frameworks */,
+				7529AC4416207801003B6A9B /* Accounts.framework in Frameworks */,
 				7529AC3A162068B8003B6A9B /* MobileCoreServices.framework in Frameworks */,
 				F9A7A7261620275300541767 /* UIKit.framework in Frameworks */,
 				F9A7A7281620275300541767 /* Foundation.framework in Frameworks */,
 				F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */,
+				7529AC42162075E0003B6A9B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +103,10 @@
 		F9A7A7161620275200541767 = {
 			isa = PBXGroup;
 			children = (
+				7529AC4E162095F2003B6A9B /* CoreLocation.framework */,
+				7529AC4716207909003B6A9B /* Social.framework */,
+				7529AC451620780A003B6A9B /* AdSupport.framework */,
+				7529AC4316207801003B6A9B /* Accounts.framework */,
 				7529AC39162068B8003B6A9B /* MobileCoreServices.framework */,
 				F9A7A72B1620275300541767 /* CrimeAlert */,
 				F9B6AA1F1620611000FC98E4 /* Resources */,
@@ -98,6 +126,8 @@
 		F9A7A7241620275300541767 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7529AC4916207945003B6A9B /* FacebookSDKResources.bundle */,
+				7529AC41162075E0003B6A9B /* FacebookSDK.framework */,
 				F9A7A7251620275300541767 /* UIKit.framework */,
 				F9A7A7271620275300541767 /* Foundation.framework */,
 				F9A7A7291620275300541767 /* CoreGraphics.framework */,
@@ -108,8 +138,10 @@
 		F9A7A72B1620275300541767 /* CrimeAlert */ = {
 			isa = PBXGroup;
 			children = (
-				7529AC3C1620698E003B6A9B /* LoginViewController.m */,
+				7529AC4B16207D18003B6A9B /* InitialViewController.h */,
+				7529AC4C16207D18003B6A9B /* InitialViewController.m */,
 				7529AC3D1620698E003B6A9B /* LoginViewController.h */,
+				7529AC3C1620698E003B6A9B /* LoginViewController.m */,
 				F91B03901620358800645C90 /* MWHTTPRequest.h */,
 				F91B03911620358800645C90 /* MWHTTPRequest.m */,
 				F9A7A7341620275400541767 /* AppDelegate.h */,
@@ -149,6 +181,8 @@
 		F9B6AA201620611F00FC98E4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7529AC5016209D8E003B6A9B /* settings_btn.png */,
+				7529AC5116209D8E003B6A9B /* settings_btn@2x.png */,
 				F9B6AA211620630F00FC98E4 /* X-Large_278x44_glowy.png */,
 				F9B6AA221620630F00FC98E4 /* X-Large_278x44.png */,
 				F976967316205AA00058A023 /* button-bgr.png */,
@@ -222,6 +256,9 @@
 				F9B6AA231620630F00FC98E4 /* X-Large_278x44_glowy.png in Resources */,
 				F9B6AA241620630F00FC98E4 /* X-Large_278x44.png in Resources */,
 				7529AC40162069B5003B6A9B /* ToDo.rtf in Resources */,
+				7529AC4A16207945003B6A9B /* FacebookSDKResources.bundle in Resources */,
+				7529AC5216209D8E003B6A9B /* settings_btn.png in Resources */,
+				7529AC5316209D8E003B6A9B /* settings_btn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +274,7 @@
 				F9A7A7451620275400541767 /* ViewController.m in Sources */,
 				F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */,
 				7529AC3E1620698E003B6A9B /* LoginViewController.m in Sources */,
+				7529AC4D16207D18003B6A9B /* InitialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,10 +357,15 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karolis Stasaitis (7A92KT88UT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -336,10 +379,15 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karolis Stasaitis (7A92KT88UT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

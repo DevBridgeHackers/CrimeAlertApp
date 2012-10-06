@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import <CoreLocation/CoreLocation.h>
 @interface LoginViewController ()
 
 @end
@@ -26,7 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self.navigationItem setHidesBackButton:YES animated:NO];
+    
+    if ([CLLocationManager locationServicesEnabled]) {
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. Please enable them for app to work correctly!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [servicesDisabledAlert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +40,10 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doLogin:(id)sender {
-    [self performSegueWithIdentifier:@"showMainViewSegue" sender:self];
+//    [self performSegueWithIdentifier:@"showMainViewSegue" sender:self];
+    if ([self.delegate respondsToSelector:@selector(loginViewControllerLogging)]) {
+        [self.delegate loginViewControllerLogging];
+    }
 }
 
 @end
