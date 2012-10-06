@@ -22,6 +22,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doPhoto:" destination="2" eventType="touchUpInside" id="NnQ-Dj-ZMX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-0p-j7a">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -33,6 +36,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doVideo:" destination="2" eventType="touchUpInside" id="ul6-ev-eB2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,7 +59,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="W8i-EP-ClH" kind="push" id="hCL-o0-KI7"/>
+                        <segue destination="W8i-EP-ClH" kind="push" identifier="showCommentsSegue" id="hCL-o0-KI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -322,6 +328,10 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doPhoto:"/>
+                <relationship kind="action" name="doVideo:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSDictionary *selectedMedia;
+
 @end
 
 @implementation ViewController
@@ -29,10 +31,7 @@
 
 - (IBAction)doPhoto:(id)sender
 {
-    
-    
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    [picker setMediaTypes:@[(NSString *)kUTTypeJPEG]];
     picker.delegate = self;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
@@ -40,37 +39,46 @@
     else
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    
-//    NSArray * availableTypes = [UIImagePickerController availableCaptureModesForCameraDevice:UIImagePickerControllerCameraDeviceRear];
-    
-    
+    [self presentModalViewController:picker animated:YES];
 }
 
 - (IBAction)doVideo:(id)sender
 {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    [picker setMediaTypes:@[(NSString *)kUTTypeMovie]];
     picker.delegate = self;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
+        [picker setMediaTypes:@[(NSString *)kUTTypeMovie]];
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         picker.videoQuality = UIImagePickerControllerQualityTypeLow;
-        
     }
     else
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 
+    [self presentModalViewController:picker animated:YES];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    
+    [self dismissModalViewControllerAnimated:YES];
+    self.selectedMedia = info;
+    [self performSegueWithIdentifier:@"showCommentsSegue" sender:self];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showCommentsSegue"])
+    {
+        [segue.destinationViewController setSelectedMedia:self.selectedMedia];
+    }
 }
 
 @end
