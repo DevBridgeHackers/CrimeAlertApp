@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWHTTPRequest.h"
 
-@interface UploadViewController : UIViewController
+@interface UploadViewController : UIViewController <MWHTTPRequestDelegate>
+
+@property (weak, nonatomic) IBOutlet UISwitch *shareSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *publicSwitch;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (weak, nonatomic) IBOutlet UITextView *commentsView;
+@property (strong, nonatomic) NSDictionary *selectedMedia;
+@property (strong, nonatomic) MWHTTPRequest *handler;
 
 @end

@@ -14,8 +14,6 @@
 
 @implementation LoginViewController
 
-@synthesize selectedMedia = _selectedMedia;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

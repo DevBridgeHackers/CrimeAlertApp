@@ -8,15 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class MWHTTPRequest;
+
 @protocol MWHTTPRequestDelegate
 
-- (void)sendingStopedWithResult:(NSInteger)status;
-- (void)bytesWereSentWithTotalProgress:(NSInteger)percent;
+- (void)requestHandler:(MWHTTPRequest *)handler sendingStopedWithResult:(NSInteger)status;
+- (void)requestHandler:(MWHTTPRequest *)handler bytesWereSentWithTotalProgress:(float)percent;
 
 @end
 
-@interface MWHTTPRequest : NSObject <NSStreamDelegate>
+@interface MWHTTPRequest : NSObject <NSStreamDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic,assign) id<MWHTTPRequestDelegate> delegate;
+
+- (void)startSendingImage:(UIImage *)image token:(NSString *)token;
 
 @end

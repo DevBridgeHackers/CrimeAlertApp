@@ -220,6 +220,45 @@ static NSString * kDefaultPostURLText = @"";
     return result;
 }
 
+- (void)startSendingImage:(UIImage *)image token:(NSString *)token
+{
+    NSURL *remoteURL = [NSURL URLWithString:@"http://transparencyworks.devbridge.com/API/UploadImage"];
+    NSMutableURLRequest *imageRequest = [[NSMutableURLRequest alloc] initWithURL:remoteURL];
+    NSString *boundary = @"14737809831466499882746641449";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    [imageRequest addValue:contentType forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *body = [NSMutableData data];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"securityToken\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[token dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"fileData\"; filename=\"image.jpeg\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[NSData dataWithData:UIImageJPEGRepresentation(image,70)]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // add the POST data as the request body
+    [imageRequest setHTTPMethod:@"POST"];
+    [imageRequest setHTTPBody:body];
+    
+    // now lets make the connection to the web
+    self.connection = [[NSURLConnection alloc] initWithRequest:imageRequest delegate:self];
+    [self.connection start];
+}
+
+- (void)connection:(NSURLConnection *)connection   didSendBodyData:(NSInteger)bytesWritten
+ totalBytesWritten:(NSInteger)totalBytesWritten
+totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
+{
+    [self.delegate requestHandler:self bytesWereSentWithTotalProgress:((float)totalBytesWritten/totalBytesExpectedToWrite)];
+}
+
+- (void)startSendingMovieFromURL:(NSURL *)fileURL
+{
+    
+}
+
 - (void)startSend:(NSString *)filePath
 {
     BOOL                    success;
@@ -360,7 +399,7 @@ static NSString * kDefaultPostURLText = @"";
         [request setHTTPMethod:@"POST"];
         [request setHTTPBodyStream:self.consumerStream];
         
-        [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=\"%@\"", boundaryStr] forHTTPHeaderField:@"Content-Type"];
+        [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundaryStr] forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"%llu", bodyLength] forHTTPHeaderField:@"Content-Length"];
         
         self.connection = [NSURLConnection connectionWithRequest:request delegate:self];

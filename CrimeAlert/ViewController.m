@@ -35,7 +35,10 @@
     picker.delegate = self;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        [picker setMediaTypes:@[(NSString *)kUTTypeImage]];
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
     else
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     

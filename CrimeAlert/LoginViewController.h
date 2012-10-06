@@ -10,6 +10,4 @@
 
 @interface LoginViewController : UIViewController
 
-@property (nonatomic,strong) NSDictionary *selectedMedia;
-
 @end
