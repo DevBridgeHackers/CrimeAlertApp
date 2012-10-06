@@ -56,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7512CDFC16203C3200C144EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7512CDFE16203C5C00C144EF /* LoginViewController.h */,
+				7512CDFF16203C5C00C144EF /* LoginViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		F9A7A7161620275200541767 = {
 			isa = PBXGroup;
 			children = (

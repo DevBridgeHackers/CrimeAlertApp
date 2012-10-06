@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12A269" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Report" syncable="YES">
+        <attribute name="reportComment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reportDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="reportId" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="reportIsPublic" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="Settings" syncable="YES">
+        <attribute name="facebook" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Settings" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Report" positionX="160" positionY="192" width="128" height="105"/>
+    </elements>
+</model>
