@@ -59,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7512CE0C1620521500C144EF /* MobileCoreServices.framework in Frameworks */,
 				F9A7A7261620275300541767 /* UIKit.framework in Frameworks */,
 				F9A7A7281620275300541767 /* Foundation.framework in Frameworks */,
 				F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */,
@@ -71,6 +72,7 @@
 		F9A7A7161620275200541767 = {
 			isa = PBXGroup;
 			children = (
+				7512CE0B1620521500C144EF /* MobileCoreServices.framework */,
 				F9A7A72B1620275300541767 /* CrimeAlert */,
 				F9B6AA1F1620611000FC98E4 /* Resources */,
 				F9A7A7241620275300541767 /* Frameworks */,
