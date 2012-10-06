@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B03911620358800645C90 /* MWHTTPRequest.m */; };
 		F9A7A7261620275300541767 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7251620275300541767 /* UIKit.framework */; };
 		F9A7A7281620275300541767 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7271620275300541767 /* Foundation.framework */; };
 		F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7291620275300541767 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F91B03901620358800645C90 /* MWHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWHTTPRequest.h; path = ../MWHTTPRequest.h; sourceTree = "<group>"; };
+		F91B03911620358800645C90 /* MWHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWHTTPRequest.m; path = ../MWHTTPRequest.m; sourceTree = "<group>"; };
 		F9A7A7211620275300541767 /* CrimeAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7A7251620275300541767 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9A7A7271620275300541767 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,8 @@
 		F9A7A72B1620275300541767 /* CrimeAlert */ = {
 			isa = PBXGroup;
 			children = (
+				F91B03901620358800645C90 /* MWHTTPRequest.h */,
+				F91B03911620358800645C90 /* MWHTTPRequest.m */,
 				F9A7A7341620275400541767 /* AppDelegate.h */,
 				F9A7A7351620275400541767 /* AppDelegate.m */,
 				F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */,
@@ -176,6 +181,7 @@
 				F9A7A7321620275300541767 /* main.m in Sources */,
 				F9A7A7361620275400541767 /* AppDelegate.m in Sources */,
 				F9A7A7451620275400541767 /* ViewController.m in Sources */,
+				F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +304,7 @@
 				F9A7A74A1620275400541767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
