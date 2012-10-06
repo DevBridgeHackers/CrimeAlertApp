@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7512CE0C1620521500C144EF /* MobileCoreServices.framework in Frameworks */,
+				7529AC3A162068B8003B6A9B /* MobileCoreServices.framework in Frameworks */,
 				F9A7A7261620275300541767 /* UIKit.framework in Frameworks */,
 				F9A7A7281620275300541767 /* Foundation.framework in Frameworks */,
 				F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */,
@@ -103,6 +103,8 @@
 		F9A7A72B1620275300541767 /* CrimeAlert */ = {
 			isa = PBXGroup;
 			children = (
+				7529AC3C1620698E003B6A9B /* LoginViewController.m */,
+				7529AC3D1620698E003B6A9B /* LoginViewController.h */,
 				F91B03901620358800645C90 /* MWHTTPRequest.h */,
 				F91B03911620358800645C90 /* MWHTTPRequest.m */,
 				F9A7A7341620275400541767 /* AppDelegate.h */,
@@ -111,6 +113,7 @@
 				F9A7A7431620275400541767 /* ViewController.h */,
 				F9A7A7441620275400541767 /* ViewController.m */,
 				F9A7A72C1620275300541767 /* Supporting Files */,
+				7529AC3F162069B5003B6A9B /* ToDo.rtf */,
 			);
 			path = CrimeAlert;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				F976967416205AA00058A023 /* button-bgr.png in Resources */,
 				F9B6AA231620630F00FC98E4 /* X-Large_278x44_glowy.png in Resources */,
 				F9B6AA241620630F00FC98E4 /* X-Large_278x44.png in Resources */,
+				7529AC40162069B5003B6A9B /* ToDo.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +231,7 @@
 				F9A7A7361620275400541767 /* AppDelegate.m in Sources */,
 				F9A7A7451620275400541767 /* ViewController.m in Sources */,
 				F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */,
+				7529AC3E1620698E003B6A9B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
