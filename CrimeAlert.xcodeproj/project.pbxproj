@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7512CE0C1620521500C144EF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7512CE0B1620521500C144EF /* MobileCoreServices.framework */; };
+		7529AC3A162068B8003B6A9B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7529AC39162068B8003B6A9B /* MobileCoreServices.framework */; };
+		7529AC3E1620698E003B6A9B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7529AC3C1620698E003B6A9B /* LoginViewController.m */; };
+		7529AC40162069B5003B6A9B /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7529AC3F162069B5003B6A9B /* ToDo.rtf */; };
 		F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B03911620358800645C90 /* MWHTTPRequest.m */; };
 		F976966D162057520058A023 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966C162057520058A023 /* 45-movie-1.png */; };
 		F9769670162057630058A023 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966F162057630058A023 /* 86-camera.png */; };
@@ -26,10 +28,14 @@
 		F9A7A7451620275400541767 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A7441620275400541767 /* ViewController.m */; };
 		F9B6AA231620630F00FC98E4 /* X-Large_278x44_glowy.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B6AA211620630F00FC98E4 /* X-Large_278x44_glowy.png */; };
 		F9B6AA241620630F00FC98E4 /* X-Large_278x44.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B6AA221620630F00FC98E4 /* X-Large_278x44.png */; };
+		F9B6AA3416206CA400FC98E4 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B6AA3316206CA300FC98E4 /* UploadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7512CE0B1620521500C144EF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7529AC39162068B8003B6A9B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7529AC3C1620698E003B6A9B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7529AC3D1620698E003B6A9B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7529AC3F162069B5003B6A9B /* ToDo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
 		F91B03901620358800645C90 /* MWHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWHTTPRequest.h; path = ../MWHTTPRequest.h; sourceTree = "<group>"; };
 		F91B03911620358800645C90 /* MWHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWHTTPRequest.m; path = ../MWHTTPRequest.m; sourceTree = "<group>"; };
 		F976966C162057520058A023 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		F9A7A7441620275400541767 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F9B6AA211620630F00FC98E4 /* X-Large_278x44_glowy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X-Large_278x44_glowy.png"; sourceTree = "<group>"; };
 		F9B6AA221620630F00FC98E4 /* X-Large_278x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X-Large_278x44.png"; sourceTree = "<group>"; };
+		F9B6AA3216206CA300FC98E4 /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		F9B6AA3316206CA300FC98E4 /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +100,7 @@
 		F9A7A7241620275300541767 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7512CE0B1620521500C144EF /* MobileCoreServices.framework */,
+				7529AC39162068B8003B6A9B /* MobileCoreServices.framework */,
 				F9A7A7251620275300541767 /* UIKit.framework */,
 				F9A7A7271620275300541767 /* Foundation.framework */,
 				F9A7A7291620275300541767 /* CoreGraphics.framework */,
@@ -103,15 +111,9 @@
 		F9A7A72B1620275300541767 /* CrimeAlert */ = {
 			isa = PBXGroup;
 			children = (
-				7529AC3C1620698E003B6A9B /* LoginViewController.m */,
-				7529AC3D1620698E003B6A9B /* LoginViewController.h */,
-				F91B03901620358800645C90 /* MWHTTPRequest.h */,
-				F91B03911620358800645C90 /* MWHTTPRequest.m */,
-				F9A7A7341620275400541767 /* AppDelegate.h */,
-				F9A7A7351620275400541767 /* AppDelegate.m */,
-				F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */,
-				F9A7A7431620275400541767 /* ViewController.h */,
-				F9A7A7441620275400541767 /* ViewController.m */,
+				F9B6AA3116206BB500FC98E4 /* Main */,
+				F9B6AA3016206B6300FC98E4 /* Services */,
+				F9B6AA2F16206B5400FC98E4 /* Views */,
 				F9A7A72C1620275300541767 /* Supporting Files */,
 				7529AC3F162069B5003B6A9B /* ToDo.rtf */,
 			);
@@ -152,6 +154,38 @@
 				F976966C162057520058A023 /* 45-movie-1.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		F9B6AA2F16206B5400FC98E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */,
+				F9A7A7431620275400541767 /* ViewController.h */,
+				F9A7A7441620275400541767 /* ViewController.m */,
+				7529AC3C1620698E003B6A9B /* LoginViewController.m */,
+				7529AC3D1620698E003B6A9B /* LoginViewController.h */,
+				F9B6AA3216206CA300FC98E4 /* UploadViewController.h */,
+				F9B6AA3316206CA300FC98E4 /* UploadViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F9B6AA3016206B6300FC98E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F91B03901620358800645C90 /* MWHTTPRequest.h */,
+				F91B03911620358800645C90 /* MWHTTPRequest.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		F9B6AA3116206BB500FC98E4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F9A7A7341620275400541767 /* AppDelegate.h */,
+				F9A7A7351620275400541767 /* AppDelegate.m */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +266,7 @@
 				F9A7A7451620275400541767 /* ViewController.m in Sources */,
 				F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */,
 				7529AC3E1620698E003B6A9B /* LoginViewController.m in Sources */,
+				F9B6AA3416206CA400FC98E4 /* UploadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

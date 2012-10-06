@@ -1,20 +1,18 @@
 //
-//  LoginViewController.m
+//  UploadViewController.m
 //  CrimeAlert
 //
-//  Created by Rasa Gentvilaite on 10/6/12.
+//  Created by Karolis Stasaitis on 10/6/12.
 //  Copyright (c) 2012 Karolis Stasaitis. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "UploadViewController.h"
 
-@interface LoginViewController ()
+@interface UploadViewController ()
 
 @end
 
-@implementation LoginViewController
-
-@synthesize selectedMedia = _selectedMedia;
+@implementation UploadViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,9 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)doLogin:(id)sender {
-    [self performSegueWithIdentifier:@"showMainViewSegue" sender:self];
 }
 
 @end
