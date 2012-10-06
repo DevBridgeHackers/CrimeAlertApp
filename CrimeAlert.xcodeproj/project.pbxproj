@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B03911620358800645C90 /* MWHTTPRequest.m */; };
+		F976966D162057520058A023 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966C162057520058A023 /* 45-movie-1.png */; };
+		F9769670162057630058A023 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966F162057630058A023 /* 86-camera.png */; };
+		F9769672162058450058A023 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9769671162058450058A023 /* 20-gear2.png */; };
+		F976967416205AA00058A023 /* button-bgr.png in Resources */ = {isa = PBXBuildFile; fileRef = F976967316205AA00058A023 /* button-bgr.png */; };
 		F9A7A7261620275300541767 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7251620275300541767 /* UIKit.framework */; };
 		F9A7A7281620275300541767 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7271620275300541767 /* Foundation.framework */; };
 		F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7291620275300541767 /* CoreGraphics.framework */; };
@@ -19,11 +23,17 @@
 		F9A7A73C1620275400541767 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A7A73B1620275400541767 /* Default-568h@2x.png */; };
 		F9A7A73F1620275400541767 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */; };
 		F9A7A7451620275400541767 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A7441620275400541767 /* ViewController.m */; };
+		F9B6AA231620630F00FC98E4 /* X-Large_278x44_glowy.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B6AA211620630F00FC98E4 /* X-Large_278x44_glowy.png */; };
+		F9B6AA241620630F00FC98E4 /* X-Large_278x44.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B6AA221620630F00FC98E4 /* X-Large_278x44.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F91B03901620358800645C90 /* MWHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWHTTPRequest.h; path = ../MWHTTPRequest.h; sourceTree = "<group>"; };
 		F91B03911620358800645C90 /* MWHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWHTTPRequest.m; path = ../MWHTTPRequest.m; sourceTree = "<group>"; };
+		F976966C162057520058A023 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
+		F976966F162057630058A023 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		F9769671162058450058A023 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		F976967316205AA00058A023 /* button-bgr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bgr.png"; sourceTree = "<group>"; };
 		F9A7A7211620275300541767 /* CrimeAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7A7251620275300541767 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9A7A7271620275300541767 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +50,8 @@
 		F9A7A73E1620275400541767 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		F9A7A7431620275400541767 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F9A7A7441620275400541767 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9B6AA211620630F00FC98E4 /* X-Large_278x44_glowy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X-Large_278x44_glowy.png"; sourceTree = "<group>"; };
+		F9B6AA221620630F00FC98E4 /* X-Large_278x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X-Large_278x44.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,19 +68,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7512CDFC16203C3200C144EF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7512CDFE16203C5C00C144EF /* LoginViewController.h */,
-				7512CDFF16203C5C00C144EF /* LoginViewController.m */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		F9A7A7161620275200541767 = {
 			isa = PBXGroup;
 			children = (
 				F9A7A72B1620275300541767 /* CrimeAlert */,
+				F9B6AA1F1620611000FC98E4 /* Resources */,
 				F9A7A7241620275300541767 /* Frameworks */,
 				F9A7A7221620275300541767 /* Products */,
 			);
@@ -119,6 +123,28 @@
 				F9A7A73B1620275400541767 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9B6AA1F1620611000FC98E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9B6AA201620611F00FC98E4 /* Images */,
+			);
+			name = Resources;
+			path = CrimeAlert;
+			sourceTree = "<group>";
+		};
+		F9B6AA201620611F00FC98E4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F9B6AA211620630F00FC98E4 /* X-Large_278x44_glowy.png */,
+				F9B6AA221620630F00FC98E4 /* X-Large_278x44.png */,
+				F976967316205AA00058A023 /* button-bgr.png */,
+				F9769671162058450058A023 /* 20-gear2.png */,
+				F976966F162057630058A023 /* 86-camera.png */,
+				F976966C162057520058A023 /* 45-movie-1.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +203,12 @@
 				F9A7A73A1620275400541767 /* Default@2x.png in Resources */,
 				F9A7A73C1620275400541767 /* Default-568h@2x.png in Resources */,
 				F9A7A73F1620275400541767 /* MainStoryboard_iPhone.storyboard in Resources */,
+				F976966D162057520058A023 /* 45-movie-1.png in Resources */,
+				F9769670162057630058A023 /* 86-camera.png in Resources */,
+				F9769672162058450058A023 /* 20-gear2.png in Resources */,
+				F976967416205AA00058A023 /* button-bgr.png in Resources */,
+				F9B6AA231620630F00FC98E4 /* X-Large_278x44_glowy.png in Resources */,
+				F9B6AA241620630F00FC98E4 /* X-Large_278x44.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +303,15 @@
 		F9A7A7491620275400541767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karolis Stasaitis (7A92KT88UT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -284,11 +320,15 @@
 		F9A7A74A1620275400541767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karolis Stasaitis (7A92KT88UT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
