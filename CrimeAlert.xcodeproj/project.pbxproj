@@ -17,7 +17,6 @@
 		F9A7A73A1620275400541767 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A7A7391620275400541767 /* Default@2x.png */; };
 		F9A7A73C1620275400541767 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A7A73B1620275400541767 /* Default-568h@2x.png */; };
 		F9A7A73F1620275400541767 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */; };
-		F9A7A7421620275400541767 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A7A7401620275400541767 /* MainStoryboard_iPad.storyboard */; };
 		F9A7A7451620275400541767 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A7441620275400541767 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		F9A7A7391620275400541767 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F9A7A73B1620275400541767 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F9A7A73E1620275400541767 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		F9A7A7411620275400541767 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		F9A7A7431620275400541767 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F9A7A7441620275400541767 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +86,6 @@
 				F9A7A7341620275400541767 /* AppDelegate.h */,
 				F9A7A7351620275400541767 /* AppDelegate.m */,
 				F9A7A73D1620275400541767 /* MainStoryboard_iPhone.storyboard */,
-				F9A7A7401620275400541767 /* MainStoryboard_iPad.storyboard */,
 				F9A7A7431620275400541767 /* ViewController.h */,
 				F9A7A7441620275400541767 /* ViewController.m */,
 				F9A7A72C1620275300541767 /* Supporting Files */,
@@ -166,7 +163,6 @@
 				F9A7A73A1620275400541767 /* Default@2x.png in Resources */,
 				F9A7A73C1620275400541767 /* Default-568h@2x.png in Resources */,
 				F9A7A73F1620275400541767 /* MainStoryboard_iPhone.storyboard in Resources */,
-				F9A7A7421620275400541767 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,14 +196,6 @@
 				F9A7A73E1620275400541767 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		F9A7A7401620275400541767 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9A7A7411620275400541767 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -271,7 +259,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -282,7 +272,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
