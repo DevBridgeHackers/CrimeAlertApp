@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7512CE0016203C5C00C144EF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512CDFF16203C5C00C144EF /* LoginViewController.m */; };
+		7512CE0C1620521500C144EF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7512CE0B1620521500C144EF /* MobileCoreServices.framework */; };
 		F9A7A7261620275300541767 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7251620275300541767 /* UIKit.framework */; };
 		F9A7A7281620275300541767 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7271620275300541767 /* Foundation.framework */; };
 		F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7A7291620275300541767 /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		7512CDFE16203C5C00C144EF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7512CDFF16203C5C00C144EF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7512CE0B1620521500C144EF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F9A7A7211620275300541767 /* CrimeAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7A7251620275300541767 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9A7A7271620275300541767 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7512CE0C1620521500C144EF /* MobileCoreServices.framework in Frameworks */,
 				F9A7A7261620275300541767 /* UIKit.framework in Frameworks */,
 				F9A7A7281620275300541767 /* Foundation.framework in Frameworks */,
 				F9A7A72A1620275300541767 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +71,7 @@
 		F9A7A7161620275200541767 = {
 			isa = PBXGroup;
 			children = (
+				7512CE0B1620521500C144EF /* MobileCoreServices.framework */,
 				F9A7A72B1620275300541767 /* CrimeAlert */,
 				F9A7A7241620275300541767 /* Frameworks */,
 				F9A7A7221620275300541767 /* Products */,
@@ -270,11 +274,13 @@
 		F9A7A7491620275400541767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tadas Ziemys (6H9A78DXQB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,11 +289,13 @@
 		F9A7A74A1620275400541767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tadas Ziemys (6H9A78DXQB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrimeAlert/CrimeAlert-Prefix.pch";
 				INFOPLIST_FILE = "CrimeAlert/CrimeAlert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
