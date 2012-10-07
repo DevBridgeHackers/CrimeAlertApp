@@ -367,9 +367,6 @@
         <class className="SSTextView" superclassName="UITextView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SSTextView.h"/>
         </class>
-        <class className="SSTextView" superclassName="UITextView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSTextView.h"/>
-        </class>
         <class className="SettingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
