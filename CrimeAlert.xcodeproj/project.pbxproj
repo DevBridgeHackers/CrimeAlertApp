@@ -21,6 +21,7 @@
 		7529AC5316209D8E003B6A9B /* settings_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7529AC5116209D8E003B6A9B /* settings_btn@2x.png */; };
 		7529AC591620B01A003B6A9B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7529AC581620B01A003B6A9B /* SettingsViewController.m */; };
 		7529AC6C16218313003B6A9B /* SSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7529AC6B16218313003B6A9B /* SSTextView.m */; };
+		7529AC7316218585003B6A9B /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7529AC7116218585003B6A9B /* UploadViewController.m */; };
 		F91B03921620358800645C90 /* MWHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B03911620358800645C90 /* MWHTTPRequest.m */; };
 		F976966D162057520058A023 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966C162057520058A023 /* 45-movie-1.png */; };
 		F9769670162057630058A023 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F976966F162057630058A023 /* 86-camera.png */; };
@@ -60,6 +61,8 @@
 		7529AC581620B01A003B6A9B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		7529AC6A16218313003B6A9B /* SSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTextView.h; sourceTree = "<group>"; };
 		7529AC6B16218313003B6A9B /* SSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTextView.m; sourceTree = "<group>"; };
+		7529AC7016218584003B6A9B /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		7529AC7116218585003B6A9B /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 		F91B03901620358800645C90 /* MWHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWHTTPRequest.h; path = ../MWHTTPRequest.h; sourceTree = "<group>"; };
 		F91B03911620358800645C90 /* MWHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWHTTPRequest.m; path = ../MWHTTPRequest.m; sourceTree = "<group>"; };
 		F976966C162057520058A023 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 		F9A7A72B1620275300541767 /* CrimeAlert */ = {
 			isa = PBXGroup;
 			children = (
+				7529AC7016218584003B6A9B /* UploadViewController.h */,
+				7529AC7116218585003B6A9B /* UploadViewController.m */,
 				7529AC6A16218313003B6A9B /* SSTextView.h */,
 				7529AC6B16218313003B6A9B /* SSTextView.m */,
 				7529AC571620B01A003B6A9B /* SettingsViewController.h */,
@@ -287,6 +292,7 @@
 				7529AC4D16207D18003B6A9B /* InitialViewController.m in Sources */,
 				7529AC591620B01A003B6A9B /* SettingsViewController.m in Sources */,
 				7529AC6C16218313003B6A9B /* SSTextView.m in Sources */,
+				7529AC7316218585003B6A9B /* UploadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
