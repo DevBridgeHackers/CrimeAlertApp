@@ -8,8 +8,10 @@
 
 #import "LoginViewController.h"
 #import <CoreLocation/CoreLocation.h>
-@interface LoginViewController () <UIAlertViewDelegate, CLLocationManagerDelegate>
-@property (nonatomic, strong) CLLocationManager *manager;
+#import "LocationSingle.h"
+
+@interface LoginViewController () <UIAlertViewDelegate>//, CLLocationManagerDelegate>
+//@property (nonatomic, strong) CLLocationManager *manager;
 @end
 
 @implementation LoginViewController
@@ -28,20 +30,15 @@
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES animated:NO];
     
-    if (![CLLocationManager locationServicesEnabled]) {
-        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. Please enable them for app to work correctly!" delegate:nil cancelButtonTitle:@"Quit" otherButtonTitles:nil];
-        servicesDisabledAlert.delegate = self;
-        [servicesDisabledAlert show];
-    }
-    else
-    {
-        CLLocationManager *manager = [[CLLocationManager alloc] init];
-        self.manager = manager;
-        //must use this setting
-        manager.desiredAccuracy = kCLLocationAccuracyBest;
-        [manager startUpdatingLocation];
-        manager.delegate = self;
-    }
+//    if (![CLLocationManager locationServicesEnabled]) {
+//        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. Please enable them for app to work correctly!" delegate:nil cancelButtonTitle:@"Quit" otherButtonTitles:nil];
+//        servicesDisabledAlert.delegate = self;
+//        [servicesDisabledAlert show];
+//    }
+//    else
+//    {
+//        [[LocationSingle sharedInstance].locationManager startUpdatingLocation];
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,30 +55,26 @@
 
 #pragma mark - Locations
 
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError:");
-    //user denied access to location
-    if (error.code == kCLErrorDenied) {
-        UIAlertView *locationDeniedAlert = [[UIAlertView alloc] initWithTitle:@"Location Denied!" message:@"You must allow app to use your location!" delegate:self cancelButtonTitle:@"Settings" otherButtonTitles:nil];
-        locationDeniedAlert.delegate = self;
-        locationDeniedAlert.tag = 10;
-        [locationDeniedAlert show];
-    }
-}
+//- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+//{
+//    NSLog(@"didFailWithError:");
+//    //user denied access to location
+//    if (error.code == kCLErrorDenied) {
+//        UIAlertView *locationDeniedAlert = [[UIAlertView alloc] initWithTitle:@"Location Denied!" message:@"You must allow app to use your location!" delegate:self cancelButtonTitle:@"Settings" otherButtonTitles:nil];
+//        locationDeniedAlert.delegate = self;
+//        locationDeniedAlert.tag = 10;
+//        [locationDeniedAlert show];
+//    }
+//}
+//
+//- (void)locationManager:(CLLocationManager *)manager
+//	didUpdateToLocation:(CLLocation *)newLocation
+//		   fromLocation:(CLLocation *)oldLocation
+//{
+//    NSLog(@"didUpdateToLocation:");
+//}
 
-- (void)locationManager:(CLLocationManager *)manager
-	didUpdateToLocation:(CLLocation *)newLocation
-		   fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation:");
-}
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General&path=Privacy"]];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General"]];
-}
 
 
 @end

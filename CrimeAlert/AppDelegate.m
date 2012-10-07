@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "LocationSingle.h"
 
 @implementation AppDelegate
 
@@ -15,7 +16,15 @@
 {
     
     // Override point for customization after application launch.
-    
+    if (![CLLocationManager locationServicesEnabled]) {
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. Please enable them for app to work correctly!" delegate:nil cancelButtonTitle:@"Quit" otherButtonTitles:nil];
+        servicesDisabledAlert.delegate = self;
+        [servicesDisabledAlert show];
+    }
+    else
+    {
+        [[LocationSingle sharedInstance].locationManager startUpdatingLocation];
+    }
     
     
     return YES;
@@ -113,6 +122,14 @@
 - (void)logoutFb
 {
     [FBSession.activeSession closeAndClearTokenInformation];
+}
+
+#pragma mark - Alert
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General&path=Privacy"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General"]];
 }
 
 
