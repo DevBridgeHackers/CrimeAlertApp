@@ -21,6 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.navigationItem setHidesBackButton:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,4 +85,8 @@
     }
 }
 
+- (void)viewDidUnload {
+    [self setSettingsNavBarItem:nil];
+    [super viewDidUnload];
+}
 @end

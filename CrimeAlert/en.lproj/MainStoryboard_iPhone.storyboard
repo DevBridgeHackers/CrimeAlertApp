@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2hD-f1-LZf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ng8-Fz-khK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -13,9 +13,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HPU-Hv-dVe">
-                                <rect key="frame" x="20" y="104" width="280" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="180" maxY="0.0"/>
+                                <rect key="frame" x="20" y="44" width="280" height="160"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
                                 <state key="normal" title="Photo" image="86-camera.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,9 +28,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wty-0p-j7a">
-                                <rect key="frame" x="20" y="213" width="280" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="180" maxY="0.0"/>
+                                <rect key="frame" x="20" y="211" width="280" height="161"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="65" maxY="0.0"/>
                                 <state key="normal" title="Video" image="45-movie-1.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,22 +43,23 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92170516300000005" green="0.92170516300000005" blue="0.92170516300000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Crime Alert" id="X8Y-bP-iRG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="rewind" id="5Hx-f8-lZi">
+                        <barButtonItem key="rightBarButtonItem" image="settings_btn.png" id="5Hx-f8-lZi">
                             <connections>
                                 <segue destination="OvS-9h-omw" kind="push" id="ujJ-kn-YnJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="settingsNavBarItem" destination="5Hx-f8-lZi" id="ocS-Gn-iBp"/>
                         <segue destination="W8i-EP-ClH" kind="push" identifier="showCommentsSegue" id="hCL-o0-KI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="-390"/>
+            <point key="canvasLocation" x="1081" y="-412"/>
         </scene>
         <!--Upload View Controller - Uploading...-->
         <scene sceneID="bd2-dz-54u">
@@ -69,39 +70,50 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="8TY-5w-KcF">
-                                <rect key="frame" x="20" y="20" width="280" height="9"/>
+                                <rect key="frame" x="20" y="18" width="280" height="9"/>
                             </progressView>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="sfb-cx-MZG">
-                                <rect key="frame" x="223" y="49" width="79" height="27"/>
+                                <rect key="frame" x="223" y="46" width="79" height="27"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEL-8P-nly">
-                                <rect key="frame" x="169" y="52" width="46" height="21"/>
+                                <rect key="frame" x="169" y="49" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please put in your comments" id="YC0-mf-K6p">
-                                <rect key="frame" x="20" y="84" width="280" height="161"/>
-                                <color key="backgroundColor" red="0.89828889266304346" green="0.89828889266304346" blue="0.89828889266304346" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="82" width="280" height="148"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bTS-5W-8VW">
-                                <rect key="frame" x="75" y="49" width="79" height="27"/>
+                                <rect key="frame" x="75" y="46" width="79" height="27"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Public" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JUw-VZ-Nwd">
-                                <rect key="frame" x="20" y="52" width="47" height="21"/>
+                                <rect key="frame" x="20" y="49" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92170516300000005" green="0.92170516300000005" blue="0.92170516300000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Uploading..." id="FcJ-CG-eqy">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="V9e-YZ-b2s"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AMO-H0-gJc">
+                            <color key="tintColor" red="1" green="0.035351606611024211" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="performCancel:" destination="W8i-EP-ClH" id="hXB-Nb-d3G"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="V9e-YZ-b2s">
+                            <connections>
+                                <action selector="performDone:" destination="W8i-EP-ClH" id="0oC-ex-4uw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelNavItem" destination="V9e-YZ-b2s" id="DyS-q8-OnG"/>
                         <outlet property="commentsView" destination="YC0-mf-K6p" id="rTh-CP-02V"/>
                         <outlet property="progressBar" destination="8TY-5w-KcF" id="EeA-Lu-eDp"/>
                         <outlet property="publicSwitch" destination="bTS-5W-8VW" id="Ju2-Xz-dnN"/>
@@ -110,12 +122,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPb-ld-9LJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="-66"/>
+            <point key="canvasLocation" x="1942" y="-332"/>
         </scene>
-        <!--Table View Controller - Settings-->
+        <!--Settings View Controller - Settings-->
         <scene sceneID="Mk4-NI-pyt">
             <objects>
-                <tableViewController id="OvS-9h-omw" sceneMemberID="viewController">
+                <tableViewController id="OvS-9h-omw" customClass="SettingsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wdR-bP-Mie">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +135,7 @@
                         <sections>
                             <tableViewSection id="WyV-Cg-aec">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="an1-p0-YtH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="an1-p0-YtH">
                                         <rect key="frame" x="0.0" y="10" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -131,19 +143,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nqG-fI-56w">
-                                                    <rect key="frame" x="20" y="11" width="75" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="10" width="81" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="U15-vd-C8g">
-                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
-                                                </switch>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c4u-3w-Deh">
+                                                    <rect key="frame" x="207" y="-1" width="73" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Logout">
+                                                        <color key="titleColor" red="0.65932829483695654" green="0.16336839972162676" blue="0.16434002408137496" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uAA-Hk-1rd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uAA-Hk-1rd">
                                         <rect key="frame" x="0.0" y="55" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -151,14 +172,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AM8-2w-7qF">
-                                                    <rect key="frame" x="20" y="11" width="51" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="10" width="57" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="juV-ba-buA">
-                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
-                                                </switch>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D11-jm-ogk">
+                                                    <rect key="frame" x="207" y="-1" width="73" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Logout">
+                                                        <color key="titleColor" red="0.65932829479999999" green="0.1633683997" blue="0.16434002410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -172,10 +202,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="pk6-Eq-dka"/>
+                    <connections>
+                        <outlet property="fbLogBtn" destination="c4u-3w-Deh" id="ZLe-Ff-cus"/>
+                        <outlet property="twLogBtn" destination="D11-jm-ogk" id="AU7-fN-Oiv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEa-WN-K0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198" y="-742"/>
+            <point key="canvasLocation" x="1557" y="-638"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="adg-Ck-mqO">
@@ -186,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yoj-yJ-lz0">
-                                <rect key="frame" x="20" y="152" width="280" height="47"/>
+                                <rect key="frame" x="20" y="150" width="280" height="47"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login with facebook" image="X-Large_278x44.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,13 +234,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by clicking this button you agree with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V18-4k-YiW">
-                                <rect key="frame" x="19" y="236" width="233" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="19" y="234" width="233" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xUJ-xt-VUo">
-                                <rect key="frame" x="248" y="225" width="65" height="44"/>
+                                <rect key="frame" x="248" y="223" width="65" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="License">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -220,16 +254,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92170516300000005" green="0.92170516300000005" blue="0.92170516300000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="YA2-zg-HCI"/>
-                    <connections>
-                        <segue destination="2" kind="push" identifier="showMainViewSegue" id="vwy-01-Rkd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cF6-Bo-xLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215" y="-454"/>
+            <point key="canvasLocation" x="1143" y="-1249"/>
         </scene>
         <!--View Controller - License-->
         <scene sceneID="XCm-pE-cyD">
@@ -239,57 +270,86 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LSP-Lz-2uV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Some very serious legal stuff about some stuff." id="LSP-Lz-2uV">
+                                <rect key="frame" x="20" y="20" width="280" height="376"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92170516300000005" green="0.92170516300000005" blue="0.92170516300000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="License" id="YGw-pd-4jC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5a-E9-xOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="-1037"/>
+            <point key="canvasLocation" x="1557" y="-1249"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="1II-0E-nLq">
+            <objects>
+                <viewController id="Jue-s4-ZWZ" customClass="InitialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O4l-JP-RFt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N70-XJ-GxN"/>
+                    <connections>
+                        <segue destination="Lc2-rg-Siw" kind="push" identifier="showLoginViewSegue" id="va5-7n-6Bv"/>
+                        <segue destination="2" kind="push" identifier="skipMainViewSegue" id="mdz-0q-uyK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Te-mG-2ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="-1065"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="JkR-qm-fMT">
+        <scene sceneID="JxP-z6-abC">
             <objects>
-                <navigationController id="2hD-f1-LZf" sceneMemberID="viewController">
+                <navigationController id="ng8-Fz-khK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="tTW-Tp-XRm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="42d-F3-NQ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Lc2-rg-Siw" kind="relationship" relationship="rootViewController" id="MNL-hd-V9J"/>
+                        <segue destination="Jue-s4-ZWZ" kind="relationship" relationship="rootViewController" id="lja-vi-GvX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Lv-SR-c4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umz-Cb-tpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291" y="-454"/>
+            <point key="canvasLocation" x="79" y="-1065"/>
         </scene>
     </scenes>
     <resources>
         <image name="45-movie-1.png" width="19" height="25"/>
         <image name="86-camera.png" width="24" height="18"/>
         <image name="X-Large_278x44.png" width="280" height="47"/>
+        <image name="settings_btn.png" width="20" height="20"/>
     </resources>
     <classes>
+        <class className="InitialViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialViewController.h"/>
+        </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
-                <relationship kind="action" name="doLogin:"/>
+                <relationship kind="outlet" name="fbLogBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twLogBtn" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="UploadViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UploadViewController.h"/>
             <relationships>
+                <relationship kind="action" name="performCancel:"/>
+                <relationship kind="action" name="performDone:"/>
+                <relationship kind="outlet" name="cancelNavItem" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="commentsView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="progressBar" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="publicSwitch" candidateClass="UISwitch"/>
@@ -301,6 +361,7 @@
             <relationships>
                 <relationship kind="action" name="doPhoto:"/>
                 <relationship kind="action" name="doVideo:"/>
+                <relationship kind="outlet" name="settingsNavBarItem" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
     </classes>

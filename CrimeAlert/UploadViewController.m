@@ -54,6 +54,7 @@
 {
     [super viewDidLoad];
     self.progressBar.progress = 0;
+    [self.cancelNavItem setEnabled:NO];
 	// Do any additional setup after loading the view.
 }
 
@@ -68,6 +69,7 @@
     [self setPublicSwitch:nil];
     [self setProgressBar:nil];
     [self setCommentsView:nil];
+    [self setCancelNavItem:nil];
     [super viewDidUnload];
 }
 
@@ -78,9 +80,16 @@
 
 -(void)requestHandler:(MWHTTPRequest *)handler sendingStopedWithResult:(NSInteger)status
 {
-#warning inclomplete
+    [self.cancelNavItem setEnabled:YES];
 }
 
+- (IBAction)performCancel:(id)sender {
+    [self.handler stopSendWithStatus:@"Cancelled"];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+- (IBAction)performDone:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

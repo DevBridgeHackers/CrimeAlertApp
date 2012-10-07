@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsNavBarItem;
+
 @end

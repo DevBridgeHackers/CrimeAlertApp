@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *commentsView;
 @property (strong, nonatomic) NSDictionary *selectedMedia;
 @property (strong, nonatomic) MWHTTPRequest *handler;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelNavItem;
 
 @end
