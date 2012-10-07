@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ng8-Fz-khK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ng8-Fz-khK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -93,7 +93,7 @@
                                 <color key="textColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please put in your comments" id="YC0-mf-K6p">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please put in your comments" id="YC0-mf-K6p" customClass="SSTextView">
                                 <rect key="frame" x="20" y="82" width="280" height="148"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -361,6 +361,9 @@
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
         </class>
+        <class className="SSTextView" superclassName="UITextView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSTextView.h"/>
+        </class>
         <class className="SettingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
@@ -371,6 +374,9 @@
         <class className="UploadViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UploadViewController.h"/>
             <relationships>
+                <relationship kind="action" name="performCancel:"/>
+                <relationship kind="action" name="performDone:"/>
+                <relationship kind="outlet" name="commentsTextView" candidateClass="SSTextView"/>
                 <relationship kind="outlet" name="commentsView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="doneNavItem" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="progressBar" candidateClass="UIProgressView"/>
