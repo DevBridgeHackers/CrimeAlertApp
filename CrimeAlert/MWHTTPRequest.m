@@ -138,11 +138,7 @@ enum {
     kPostBufferSize = 32768
 };
 
-#if TARGET_IPHONE_SIMULATOR
-static NSString * kDefaultPostURLText = @"http://localhost:9000/cgi-bin/PostIt.py";
-#else
-static NSString * kDefaultPostURLText = @"";
-#endif
+static NSString * kDefaultPostURLText = @"http://transparencyworks.devbridge.com/API/UploadVideo";
 
 @interface MWHTTPRequest ()
 
@@ -266,12 +262,12 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
     [self.delegate requestHandler:self bytesWereSentWithTotalProgress:((float)totalBytesWritten/totalBytesExpectedToWrite)];
 }
 
-- (void)startSendingMovieFromURL:(NSURL *)fileURL
+- (void)startSendingMovieFromURL:(NSURL *)fileURL token:(NSString *)token
 {
-    
+    [self startSend:fileURL token:token];
 }
 
-- (void)startSend:(NSString *)filePath
+- (void)startSend:(NSURL *)fileURL token:(NSString *)token
 {
     BOOL                    success;
     NSURL *                 url;
@@ -285,10 +281,6 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
     NSInputStream *         consStream;
     NSOutputStream *        prodStream;
     
-    assert(filePath != nil);
-    assert([[NSFileManager defaultManager] fileExistsAtPath:filePath]);
-    assert( [filePath.pathExtension isEqual:@"png"] || [filePath.pathExtension isEqual:@"jpg"] );
-    
     assert(self.connection == nil);         // don't tap send twice in a row!
     assert(self.bodyPrefixData == nil);     // ditto
     assert(self.fileStream == nil);         // ditto
@@ -300,7 +292,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
     
     // First get and check the URL.
     
-    success = (url != nil);
+    success = (fileURL != nil);
     
     // If the URL is bogus, let the user know.  Otherwise kick off the connection.
     
@@ -309,16 +301,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
     } else {
         // Determine the MIME type of the file.
         
-        if ( [filePath.pathExtension isEqual:@"png"] ) {
-            contentType = @"image/png";
-        } else if ( [filePath.pathExtension isEqual:@"jpg"] ) {
-            contentType = @"image/jpeg";
-        } else if ( [filePath.pathExtension isEqual:@"gif"] ) {
-            contentType = @"image/gif";
-        } else {
-            assert(NO);
-            contentType = nil;          // quieten a warning
-        }
+        contentType = @"video/quicktime";
         
         // Calculate the multipart/form-data body.  For more information about the
         // format of the prefix and suffix, see:
@@ -338,11 +321,11 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
                          // empty preamble
                          "\r\n"
                          "--%@\r\n"
-                         "Content-Disposition: form-data; name=\"fileContents\"; filename=\"%@\"\r\n"
+                         "Content-Disposition: form-data; name=\"fileData\"; filename=\"%@\"\r\n"
                          "Content-Type: %@\r\n"
                          "\r\n",
                          boundaryStr,
-                         [filePath lastPathComponent],       // +++ very broken for non-ASCII
+                         [fileURL.path lastPathComponent],       // +++ very broken for non-ASCII
                          contentType
                          ];
         assert(bodyPrefixStr != nil);
@@ -351,13 +334,14 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
                          @
                          "\r\n"
                          "--%@\r\n"
-                         "Content-Disposition: form-data; name=\"uploadButton\"\r\n"
+                         "Content-Disposition: form-data; name=\"securityToken\"\r\n"
                          "\r\n"
-                         "Upload File\r\n"
+                         "%@\r\n"
                          "--%@--\r\n"
                          "\r\n"
                          //empty epilogue
                          ,
+                         token,
                          boundaryStr,
                          boundaryStr
                          ];
@@ -368,7 +352,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
         self.bodySuffixData = [bodySuffixStr dataUsingEncoding:NSASCIIStringEncoding];
         assert(self.bodySuffixData != nil);
         
-        fileLengthNum = (NSNumber *) [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:NULL] objectForKey:NSFileSize];
+        fileLengthNum = (NSNumber *) [[[NSFileManager defaultManager] attributesOfItemAtPath:fileURL.path error:NULL] objectForKey:NSFileSize];
         assert( [fileLengthNum isKindOfClass:[NSNumber class]] );
         
         bodyLength =
@@ -379,7 +363,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
         // Open a stream for the file we're going to send.  We open this stream
         // straight away because there's no need to delay.
         
-        self.fileStream = [NSInputStream inputStreamWithFileAtPath:filePath];
+        self.fileStream = [NSInputStream inputStreamWithFileAtPath:fileURL.path];
         assert(self.fileStream != nil);
         
         [self.fileStream open];
