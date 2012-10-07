@@ -92,7 +92,8 @@
 }
 
 - (IBAction)performDone:(id)sender {
-    [self.handler startSendingAdditionalComments:<#(NSString *)#> isPublic:<#(BOOL)#> latitude:<#(double)#> longitude:<#(double)#> token:<#(NSString *)#>
+    NSString *token = [[FBSession activeSession] accessToken];
+    [self.handler startSendingAdditionalComments:self.commentsView.text isPublic:self.publicSwitch.isOn latitude:0 longitude:0 token:token];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

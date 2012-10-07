@@ -230,7 +230,7 @@ int currentId = 0;
 
 - (void)startSendingAdditionalComments:(NSString *)comments isPublic:(BOOL)public latitude:(double)latitude longitude:(double)longtitude token:(NSString *)token
 {
-    NSURL *remoteURL = [NSURL URLWithString:@"http://transparencyworks.devbridge.com/API/UploadReport"];
+    NSURL *remoteURL = [NSURL URLWithString:@"http://transparencyworks.devbridge.com/API/UpdateReport"];
     NSMutableURLRequest *imageRequest = [[NSMutableURLRequest alloc] initWithURL:remoteURL];
     NSString *boundary = @"14737809831466499882746641449";
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
@@ -260,9 +260,12 @@ int currentId = 0;
     [imageRequest setHTTPMethod:@"POST"];
     [imageRequest setHTTPBody:body];
     
+    NSData *data = [NSURLConnection sendSynchronousRequest:imageRequest returningResponse:nil error:nil];
+    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    
     // now lets make the connection to the web
-    self.connection = [[NSURLConnection alloc] initWithRequest:imageRequest delegate:self];
-    [self.connection start];
+    //self.connection = [[NSURLConnection alloc] initWithRequest:imageRequest delegate:self];
+    //[self.connection start];
 }
 
 - (void)startSendingImage:(UIImage *)image token:(NSString *)token
