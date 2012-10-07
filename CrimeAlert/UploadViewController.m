@@ -8,6 +8,7 @@
 
 #import "UploadViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface UploadViewController ()
 
@@ -37,16 +38,18 @@
     
     assert(self.selectedMedia);
     NSString *mediaType = [self.selectedMedia objectForKey:UIImagePickerControllerMediaType];
+    NSString *token = [[FBSession activeSession] accessToken];
     self.handler = [[MWHTTPRequest alloc] init];
     self.handler.delegate = self;
     if (mediaType == (NSString *)kUTTypeImage)
     {
         UIImage *image = [self.selectedMedia objectForKey:UIImagePickerControllerOriginalImage];
-        [self.handler startSendingImage:image token:@"TEST"];
+        [self.handler startSendingImage:image token:token];
     }
     else if (mediaType == (NSString *)kUTTypeMovie)
     {
         NSURL *movieURL = [self.selectedMedia objectForKey:UIImagePickerControllerMediaURL];
+        [self.handler startSendingMovieFromURL:movieURL token:token];
     }
 }
 
@@ -54,7 +57,7 @@
 {
     [super viewDidLoad];
     self.progressBar.progress = 0;
-    [self.cancelNavItem setEnabled:NO];
+    [self.doneNavItem setEnabled:NO];
 	// Do any additional setup after loading the view.
 }
 
@@ -69,7 +72,7 @@
     [self setPublicSwitch:nil];
     [self setProgressBar:nil];
     [self setCommentsView:nil];
-    [self setCancelNavItem:nil];
+    [self setDoneNavItem:nil];
     [super viewDidUnload];
 }
 
@@ -80,7 +83,7 @@
 
 -(void)requestHandler:(MWHTTPRequest *)handler sendingStopedWithResult:(NSInteger)status
 {
-    [self.cancelNavItem setEnabled:YES];
+    [self.doneNavItem setEnabled:YES];
 }
 
 - (IBAction)performCancel:(id)sender {
