@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MWHTTPRequest.h"
+#import "SSTextView.h"
 
 @interface UploadViewController : UIViewController <MWHTTPRequestDelegate>
 
@@ -18,5 +19,5 @@
 @property (strong, nonatomic) NSDictionary *selectedMedia;
 @property (strong, nonatomic) MWHTTPRequest *handler;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneNavItem;
-
+@property (weak, nonatomic) IBOutlet SSTextView *commentsTextView;
 @end

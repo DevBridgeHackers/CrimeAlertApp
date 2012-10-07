@@ -9,6 +9,7 @@
 #import "UploadViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface UploadViewController ()
 
@@ -58,6 +59,9 @@
     [super viewDidLoad];
     self.progressBar.progress = 0;
     [self.doneNavItem setEnabled:NO];
+    self.commentsTextView.layer.cornerRadius = 8;
+    self.commentsTextView.placeholder = @"Please put in your comments";
+    [self.commentsTextView becomeFirstResponder];
 	// Do any additional setup after loading the view.
 }
 

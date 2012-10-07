@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "AppDelegate.h"
 
 @interface SettingsViewController ()
 
@@ -105,18 +106,13 @@
 }
 */
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (IBAction)performFbLogOut:(id)sender {
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [delegate logoutFb];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"facebook_logout" object:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 
 - (void)viewDidUnload {
     [self setFbLogBtn:nil];
