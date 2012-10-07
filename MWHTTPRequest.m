@@ -220,6 +220,16 @@ static NSString * kDefaultPostURLText = @"";
     return result;
 }
 
++ (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
+{
+    UIGraphicsBeginImageContext( newSize );
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
 - (void)startSendingImage:(UIImage *)image token:(NSString *)token
 {
     NSURL *remoteURL = [NSURL URLWithString:@"http://transparencyworks.devbridge.com/API/UploadImage"];
@@ -228,6 +238,8 @@ static NSString * kDefaultPostURLText = @"";
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
     [imageRequest addValue:contentType forHTTPHeaderField: @"Content-Type"];
     
+    NSData *imageData = UIImageJPEGRepresentation([MWHTTPRequest imageWithImage:image scaledToSize:CGSizeMake(480,640)],70);
+    
     NSMutableData *body = [NSMutableData data];
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Disposition: form-data; name=\"securityToken\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
@@ -235,7 +247,7 @@ static NSString * kDefaultPostURLText = @"";
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Disposition: form-data; name=\"fileData\"; filename=\"image.jpeg\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[NSData dataWithData:UIImageJPEGRepresentation(image,70)]];
+    [body appendData:[NSData dataWithData:imageData]];
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     
     // add the POST data as the request body
@@ -567,6 +579,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
     } else {
         NSLog(@"Response OK.");
     }
+    [self.delegate requestHandler:self sendingStopedWithResult:0];
 }
 
 - (void)connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)data

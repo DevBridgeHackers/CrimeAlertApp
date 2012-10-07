@@ -92,6 +92,7 @@
 }
 
 - (IBAction)performDone:(id)sender {
+    [self.handler startSendingAdditionalComments:<#(NSString *)#> isPublic:<#(BOOL)#> latitude:<#(double)#> longitude:<#(double)#> token:<#(NSString *)#>
     [self.navigationController popViewControllerAnimated:YES];
 }
 

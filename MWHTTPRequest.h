@@ -22,5 +22,5 @@
 @property (nonatomic,assign) id<MWHTTPRequestDelegate> delegate;
 
 - (void)startSendingImage:(UIImage *)image token:(NSString *)token;
-
+- (void)stopSendWithStatus:(NSString *)statusString;
 @end
