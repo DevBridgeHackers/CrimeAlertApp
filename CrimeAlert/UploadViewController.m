@@ -59,9 +59,9 @@
     [super viewDidLoad];
     self.progressBar.progress = 0;
     [self.doneNavItem setEnabled:NO];
-    self.commentsTextView.layer.cornerRadius = 8;
-    self.commentsTextView.placeholder = @"Please put in your comments";
-    [self.commentsTextView becomeFirstResponder];
+    self.commentsView.layer.cornerRadius = 8;
+    self.commentsView.placeholder = @"Please put in your comments";
+    [self.commentsView becomeFirstResponder];
 	// Do any additional setup after loading the view.
 }
 
@@ -88,6 +88,7 @@
 -(void)requestHandler:(MWHTTPRequest *)handler sendingStopedWithResult:(NSInteger)status
 {
     [self.doneNavItem setEnabled:YES];
+    [self setTitle:@"Uploaded"];
 }
 
 - (IBAction)performCancel:(id)sender {

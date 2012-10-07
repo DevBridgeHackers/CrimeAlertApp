@@ -84,27 +84,27 @@
                                 <color key="progressTintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="sfb-cx-MZG">
-                                <rect key="frame" x="223" y="46" width="79" height="27"/>
+                                <rect key="frame" x="223" y="40" width="79" height="27"/>
                                 <color key="onTintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEL-8P-nly">
-                                <rect key="frame" x="169" y="49" width="46" height="21"/>
+                                <rect key="frame" x="169" y="43" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please put in your comments" id="YC0-mf-K6p">
-                                <rect key="frame" x="20" y="82" width="280" height="148"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YC0-mf-K6p" customClass="SSTextView">
+                                <rect key="frame" x="20" y="82" width="280" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="bTS-5W-8VW">
-                                <rect key="frame" x="75" y="46" width="79" height="27"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bTS-5W-8VW">
+                                <rect key="frame" x="75" y="40" width="79" height="27"/>
                                 <color key="onTintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Public" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JUw-VZ-Nwd">
-                                <rect key="frame" x="20" y="49" width="52" height="21"/>
+                                <rect key="frame" x="20" y="43" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -360,10 +360,17 @@
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doLogin:"/>
+            </relationships>
+        </class>
+        <class className="SSTextView" superclassName="UITextView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSTextView.h"/>
         </class>
         <class className="SettingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="performFbLogOut:"/>
                 <relationship kind="outlet" name="fbLogBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="twLogBtn" candidateClass="UIButton"/>
             </relationships>
@@ -371,7 +378,9 @@
         <class className="UploadViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UploadViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="commentsView" candidateClass="UITextView"/>
+                <relationship kind="action" name="performCancel:"/>
+                <relationship kind="action" name="performDone:"/>
+                <relationship kind="outlet" name="commentsView" candidateClass="SSTextView"/>
                 <relationship kind="outlet" name="doneNavItem" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="progressBar" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="publicSwitch" candidateClass="UISwitch"/>
@@ -381,6 +390,8 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doPhoto:"/>
+                <relationship kind="action" name="doVideo:"/>
                 <relationship kind="outlet" name="settingsNavBarItem" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>

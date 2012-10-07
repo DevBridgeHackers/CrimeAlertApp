@@ -15,9 +15,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *shareSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *publicSwitch;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
-@property (weak, nonatomic) IBOutlet UITextView *commentsView;
+@property (weak, nonatomic) IBOutlet SSTextView *commentsView;
 @property (strong, nonatomic) NSDictionary *selectedMedia;
 @property (strong, nonatomic) MWHTTPRequest *handler;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneNavItem;
-@property (weak, nonatomic) IBOutlet SSTextView *commentsTextView;
 @end

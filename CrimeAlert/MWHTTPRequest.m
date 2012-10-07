@@ -171,6 +171,7 @@ static NSString * kDefaultPostURLText = @"http://transparencyworks.devbridge.com
 @synthesize bufferOffset    = _bufferOffset;
 @synthesize bufferLimit     = _bufferLimit;
 
+int totalBytesToWrite = 0;
 int currentId = 0;
 
 #pragma mark * Status management
@@ -335,6 +336,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
     // First get and check the URL.
     
     success = (fileURL != nil);
+    totalBytesToWrite = 0;
     
     // If the URL is bogus, let the user know.  Otherwise kick off the connection.
     
@@ -402,6 +404,8 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
         + [fileLengthNum unsignedLongLongValue]
         + (unsigned long long) [self.bodySuffixData length];
         
+        totalBytesToWrite = bodyLength;
+        
         // Open a stream for the file we're going to send.  We open this stream
         // straight away because there's no need to delay.
         
@@ -430,7 +434,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
         self.bufferLimit = [self.bodyPrefixData length];
         
         // Open a connection for the URL, configured to POST the file.
-        
+        url = [NSURL URLWithString:kDefaultPostURLText];
         request = [NSMutableURLRequest requestWithURL:url];
         assert(request != nil);
         
@@ -567,6 +571,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
             if (self.bufferOffset != self.bufferLimit) {
                 NSInteger   bytesWritten;
                 bytesWritten = [self.producerStream write:&self.buffer[self.bufferOffset] maxLength:self.bufferLimit - self.bufferOffset];
+                [self.delegate requestHandler:self bytesWereSentWithTotalProgress:((float)(self.bufferOffset + bytesWritten)/totalBytesToWrite)];
                 if (bytesWritten <= 0) {
                     [self stopSendWithStatus:@"Network write error"];
                 } else {
