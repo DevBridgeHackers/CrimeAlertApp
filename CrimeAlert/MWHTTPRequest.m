@@ -171,6 +171,8 @@ static NSString * kDefaultPostURLText = @"http://transparencyworks.devbridge.com
 @synthesize bufferOffset    = _bufferOffset;
 @synthesize bufferLimit     = _bufferLimit;
 
+int currentId = 0;
+
 #pragma mark * Status management
 
 // These methods are used by the core transfer code to update the UI.
@@ -224,6 +226,43 @@ static NSString * kDefaultPostURLText = @"http://transparencyworks.devbridge.com
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+- (void)startSendingAdditionalComments:(NSString *)comments isPublic:(BOOL)public latitude:(double)latitude longitude:(double)longtitude token:(NSString *)token
+{
+    NSURL *remoteURL = [NSURL URLWithString:@"http://transparencyworks.devbridge.com/API/UploadReport"];
+    NSMutableURLRequest *imageRequest = [[NSMutableURLRequest alloc] initWithURL:remoteURL];
+    NSString *boundary = @"14737809831466499882746641449";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    [imageRequest addValue:contentType forHTTPHeaderField: @"Content-Type"];
+    NSMutableData *body = [NSMutableData data];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"securityToken\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[token dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"isPublic\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[public ? @"true" : @"false" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"comment\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[comments dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"locationLatitude\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%f",latitude] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"locationLongtitude\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%f",longtitude] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"reportId\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%d",currentId] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // add the POST data as the request body
+    [imageRequest setHTTPMethod:@"POST"];
+    [imageRequest setHTTPBody:body];
+    
+    // now lets make the connection to the web
+    self.connection = [[NSURLConnection alloc] initWithRequest:imageRequest delegate:self];
+    [self.connection start];
 }
 
 - (void)startSendingImage:(UIImage *)image token:(NSString *)token
@@ -575,7 +614,12 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 #pragma unused(data)
     
     assert(theConnection == self.connection);
-    
+    NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    int itemid = [response intValue];
+    if (itemid)
+    {
+        currentId = itemid;
+    }
     // do nothing
 }
 

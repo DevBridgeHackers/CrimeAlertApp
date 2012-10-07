@@ -23,5 +23,6 @@
 
 - (void)startSendingImage:(UIImage *)image token:(NSString *)token;
 - (void)startSendingMovieFromURL:(NSURL *)fileURL token:(NSString *)token;
+- (void)startSendingAdditionalComments:(NSString *)comments isPublic:(BOOL)public latitude:(double)latitude longitude:(double)longtitude token:(NSString *)token;
 - (void)stopSendWithStatus:(NSString *)statusString;
 @end

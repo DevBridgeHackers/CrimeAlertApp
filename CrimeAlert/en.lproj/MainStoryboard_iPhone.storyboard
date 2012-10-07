@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ng8-Fz-khK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ng8-Fz-khK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -12,12 +12,17 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="Zuu-8Z-dsh">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HPU-Hv-dVe">
                                 <rect key="frame" x="20" y="44" width="280" height="160"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="tintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
                                 <state key="normal" title="Photo" image="86-camera.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -30,9 +35,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wty-0p-j7a">
                                 <rect key="frame" x="20" y="211" width="280" height="161"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="tintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="65" maxY="0.0"/>
                                 <state key="normal" title="Video" image="45-movie-1.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -69,16 +75,22 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="kfQ-CJ-stP">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="8TY-5w-KcF">
                                 <rect key="frame" x="20" y="18" width="280" height="9"/>
+                                <color key="progressTintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="sfb-cx-MZG">
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="sfb-cx-MZG">
                                 <rect key="frame" x="223" y="46" width="79" height="27"/>
+                                <color key="onTintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEL-8P-nly">
                                 <rect key="frame" x="169" y="49" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please put in your comments" id="YC0-mf-K6p">
@@ -87,13 +99,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bTS-5W-8VW">
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="bTS-5W-8VW">
                                 <rect key="frame" x="75" y="46" width="79" height="27"/>
+                                <color key="onTintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Public" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JUw-VZ-Nwd">
-                                <rect key="frame" x="20" y="49" width="47" height="21"/>
+                                <rect key="frame" x="20" y="49" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -101,20 +114,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="Uploading..." id="FcJ-CG-eqy">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AMO-H0-gJc">
-                            <color key="tintColor" red="1" green="0.035351606611024211" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.77127207880434789" green="0.027265707119958172" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="performCancel:" destination="W8i-EP-ClH" id="hXB-Nb-d3G"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="V9e-YZ-b2s">
+                            <color key="tintColor" red="0.44803997976295495" green="0.76322605298913038" blue="0.45574290849173821" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="performDone:" destination="W8i-EP-ClH" id="0oC-ex-4uw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelNavItem" destination="V9e-YZ-b2s" id="DyS-q8-OnG"/>
                         <outlet property="commentsView" destination="YC0-mf-K6p" id="rTh-CP-02V"/>
+                        <outlet property="doneNavItem" destination="V9e-YZ-b2s" id="be9-eM-guZ"/>
                         <outlet property="progressBar" destination="8TY-5w-KcF" id="EeA-Lu-eDp"/>
                         <outlet property="publicSwitch" destination="bTS-5W-8VW" id="Ju2-Xz-dnN"/>
                         <outlet property="shareSwitch" destination="sfb-cx-MZG" id="ejl-Rf-1Io"/>
@@ -219,6 +233,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="qiK-Vt-qvk">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yoj-yJ-lz0">
                                 <rect key="frame" x="20" y="150" width="280" height="47"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -234,16 +252,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by clicking this button you agree with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V18-4k-YiW">
-                                <rect key="frame" x="19" y="234" width="233" height="22"/>
+                                <rect key="frame" x="20" y="205" width="233" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xUJ-xt-VUo">
-                                <rect key="frame" x="248" y="223" width="65" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="248" y="194" width="52" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="License">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.56222961272723126" blue="0.16265531286889867" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -270,6 +288,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="h71-fw-i3M">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Some very serious legal stuff about some stuff." id="LSP-Lz-2uV">
                                 <rect key="frame" x="20" y="20" width="280" height="376"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,6 +335,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="42d-F3-NQ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.56222961270000005" blue="0.16265531289999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -328,6 +351,7 @@
         <image name="45-movie-1.png" width="19" height="25"/>
         <image name="86-camera.png" width="24" height="18"/>
         <image name="X-Large_278x44.png" width="280" height="47"/>
+        <image name="background.png" width="320" height="480"/>
         <image name="settings_btn.png" width="20" height="20"/>
     </resources>
     <classes>
@@ -336,9 +360,6 @@
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-        </class>
-        <class className="SSTextView" superclassName="UITextView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSTextView.h"/>
         </class>
         <class className="SettingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
@@ -350,7 +371,6 @@
         <class className="UploadViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UploadViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="commentsTextView" candidateClass="SSTextView"/>
                 <relationship kind="outlet" name="commentsView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="doneNavItem" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="progressBar" candidateClass="UIProgressView"/>
