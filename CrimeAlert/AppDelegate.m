@@ -108,5 +108,10 @@
     return [FBSession.activeSession handleOpenURL:url];
 }
 
+- (void)logoutFb
+{
+    [FBSession.activeSession closeAndClearTokenInformation];
+}
+
 
 @end

@@ -32,17 +32,9 @@
 	// Do any additional setup after loading the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fbConnected:) name:@"facebook_connected" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshMe:) name:@"facebook_logout" object:nil];
     
-    // See if we have a valid token for the current state.
-    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
-        // To-do, show logged in view
-        AppDelegate * appDelegate = [UIApplication sharedApplication].delegate;
-        [appDelegate openSession];
-        [self performSegueWithIdentifier:@"skipMainViewSegue" sender:self];
-    } else {
-        // No, display the login page.
-        [self performSegueWithIdentifier:@"showLoginViewSegue" sender:self];
-    }
+    [self checkFb];
 
 }
 
@@ -78,6 +70,26 @@
     [self.navigationController popToRootViewControllerAnimated:NO];
     [self performSegueWithIdentifier:@"skipMainViewSegue" sender:self];
 }
+
+- (void)refreshMe:(NSNotification *)note
+{
+    [self checkFb];
+}
+
+- (void)checkFb
+{
+    // See if we have a valid token for the current state.
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        // To-do, show logged in view
+        AppDelegate * appDelegate = [UIApplication sharedApplication].delegate;
+        [appDelegate openSession];
+        [self performSegueWithIdentifier:@"skipMainViewSegue" sender:self];
+    } else {
+        // No, display the login page.
+        [self performSegueWithIdentifier:@"showLoginViewSegue" sender:self];
+    }
+}
+
 
 
 @end
