@@ -279,6 +279,7 @@ int currentId = 0;
     
     NSData *imageData = UIImageJPEGRepresentation([MWHTTPRequest imageWithImage:image scaledToSize:CGSizeMake(480,640)],70);
     
+    
     NSMutableData *body = [NSMutableData data];
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Disposition: form-data; name=\"securityToken\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
